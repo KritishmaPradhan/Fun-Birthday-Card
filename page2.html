@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes/no game</title>
+</head>
+<body>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: center; 
+            background:linear-gradient(180deg, #75f2f2, rgb(205, 244, 173));
+        }
+        .birthdaymessage{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(6, 0, 19);
+            font-size: 12px;  
+            text-align: center;
+            margin-top: 40px;
+    
+        }
+            button {
+                padding: 15px 30px;
+                font-size: 16px;
+                margin: 80px;
+                background-color: rgb(249, 98, 229);
+                color: rgb(3, 3, 3);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                box-shadow: 0 6px 8px rgba(106, 106, 105, 0.949);
+            }
+    
+            button:hover {
+                background-color: #d6f841;
+            }
+            #noBtn {
+                position: relative;
+            }
+
+        </style>
+    <body>
+        <div class="birthdaymessage">
+            <h1>🎉Birthday Treat PLease🎉<br><br><br>
+                You have two options Yes or No. Choose wisely!!!!!🥳</h1> 
+        </div>
+        <div class="button-container">
+            <a href="https://foodmandu.com/">
+                <button>Yes Party</button>
+            </a>
+            <button id="noBtn">No Party</button>
+        </div>
+
+        <script>
+            const noBtn = document.getElementById('noBtn');
+            // Move the No button when hovered
+            noBtn.addEventListener('mouseover', () => {
+                const buttonWidth = noBtn.offsetWidth;
+                const buttonHeight = noBtn.offsetHeight;
+                // Calculate boundaries with padding
+                const padding = 40;
+                const maxX = window.innerWidth - buttonWidth - padding;
+                const maxY = window.innerHeight - buttonHeight - padding;
+                const minX = padding;
+                const minY = padding;
+                // Generate random position within boundaries
+                const x = Math.random() * (maxX - minX) + minX;
+                const y = Math.random() * (maxY - minY) + minY;
+            
+                noBtn.style.position = 'fixed';
+                noBtn.style.left = `${x}px`;
+                noBtn.style.top = `${y}px`;
+            });
+        </script>
+      
+</body>
+</html>

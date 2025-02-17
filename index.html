@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card for You</title>
+</head>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        align-items: center; 
+        background:linear-gradient(180deg, #75f2f2, rgb(205, 244, 173));
+    }
+    .birthdaycard{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(6, 0, 19);
+        font-size: 15px;  
+        text-align: center;
+        margin-top: 40px;
+
+    }
+    .namebox {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgb(250, 182, 241);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 60px;
+        width: 300px;
+        height: auto;
+    }
+
+    input{
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+        text-align: center;
+    }
+    input:hover{
+        border: 2px solid black;
+    }
+    button{
+        padding: 20px;
+        border: none;
+        background-color: rgb(249, 98, 229);
+        color: rgb(6, 6, 6);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 8px rgba(220, 248, 41, 0.949);
+    }
+    .wave-container {
+            position: relative;
+            width: 200%;
+            height: 600px;
+            }
+
+    .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-size: 100% 150%;
+        transform-origin: center bottom;
+    }
+    .wave3 {
+        background: url("wave.png");
+        opacity: 0.5;
+        animation: wave 14s linear infinite;
+    }
+    .wave2 {
+        background: url("wave1.png");
+        opacity: 0.7;
+        animation: wave 7s linear infinite;
+    }
+    .wave1{
+        background: url("wave2.png");
+        opacity: 0.8;
+        animation: wave 10s linear infinite
+    }
+    @keyframes wave {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+        }
+    
+</style>
+<body>
+    <div class="birthdaycard">
+        <h1>🎉Birthday Card Generator🎉<br>
+        Wish your friend a 🎂Happy Birthday in a fun and creative way 🥳</h1>
+    </div>
+    <div class="namebox">
+        <label>Enter Birthday Girl/Boy👦👧 name</label>
+        <input type="text" class="name" placeholder="enter name" required>
+        <a href="page1.html">
+            <button class="Submit">Submit</button>
+        </a>
+    </div>
+    <div class="wave-container">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+</body>
+</html>
