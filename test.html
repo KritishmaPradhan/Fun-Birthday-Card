@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #95f469;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: #090909;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .wave {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      top: 50%;
+      left: -100px;
+      background: #e7e9ea;
+      border-radius: 43%;
+      transform: translateY(0) rotate(0);
+      animation: wave 6s infinite linear;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-30%) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle">
+      <div class="wave"></div>
+    </div>
+  </div>
+</body>
+</html>
